@@ -1,0 +1,66 @@
+ion-content{
+    --ion-background-color:   #ffffff  0/100% 100% no-repeat;
+  }
+
+.fondo{
+    --background:  #E85D04;
+  }
+
+.carrito{
+    --background: #e5e5e5;
+    color: #1f1f1f;
+
+    .image {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-right: 1.2rem;
+        position: absolute;
+        left: 0.5%;
+        top: 50%;
+        transform: translateY(-50%);
+        box-shadow: 10px 10px 10px 0px #e5e5e5;
+    }
+    .descripcion{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        
+        
+
+        h4 {
+            font-weight: 600;
+            font-size: 15px;
+            color: #1f1f1f;
+        }
+
+        pre {
+            font-size: 13px;
+            font-weight: 100;
+            margin: 0.5rem 0;
+        }
+
+        .des {
+            font-size: 12px;
+        }
+
+    }
+}
+
+.botonesowo{
+    color: #E85D04;
+    --background: #fffcfc;
+    margin-top: 5px;
+    margin-bottom: 0%;
+    width: 40px;
+}
+
+.botonpago{
+    --background: #E85D04;
+    margin-top: 5px;
+    margin-bottom: 0%;
+    margin-left: 20%;
+    margin-right: 20%;
+    --border-radius: 4px;
+
+}

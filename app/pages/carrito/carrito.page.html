@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar class="fondo">
+
+    <ion-buttons slot="start">
+
+      <!--MENÚ HAMBURGUESA-->
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="dark"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Carrito</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!--Carrito front end-->
+<ion-item class="carrito" *ngFor="let p of productos" [routerLink]="p.redirecTo">
+<ion-thumbnail slot="start">
+  <img [src]="p.image">
+</ion-thumbnail>
+<ion-label >
+  <div class="descripcion">
+    <h4>{{p.title}}</h4>
+    <p class="des">{{p.des}}</p>
+    <p class="pre">{{p.precio}}</p>
+    <ion-icon slot="start" name="{{p.icono}}"></ion-icon>
+  </div>
+</ion-label>
+<ion-button class="botonesowo">
+  <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+</ion-button>
+<ion-button class="botonesowo"> 
+  <ion-icon slot="icon-only" name="remove-outline"></ion-icon>
+</ion-button>
+
+</ion-item>
+<!--Carito front end-->
+
+<ion-button  shape="round" expand="block" (click)="presentPagar()" class="botonpago">
+  Ir a pagar
+</ion-button>
+
+
+</ion-content>
+
+
+

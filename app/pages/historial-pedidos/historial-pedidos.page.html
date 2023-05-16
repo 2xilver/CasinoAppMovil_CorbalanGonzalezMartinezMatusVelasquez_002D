@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar class="fondo">
+
+    <ion-buttons slot="start">
+
+      <!--MENÚ HAMBURGUESA-->
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="dark"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div id="titulo">
+    <p id="colortexto">Historial de pedidos</p>
+  </div>
+  <!-- Card uno -->
+  <ion-card id="card">
+
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col id="titulocard"><strong id="colortexto">Pedido 00001</strong></ion-col>
+        <ion-col id="colortexto">Monto: $2.000</ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid fixed>
+      <ion-row class="row" id="colortexto">
+        <ion-col>Fecha: 01-01-2023</ion-col>
+        <ion-col id="colortexto">Estado: Finalizado</ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col id="colortexto">Comentarios: </ion-col>
+        <ion-button [routerLink]="['/pedido']">
+          ver
+        </ion-button>
+      </ion-row>
+    </ion-grid>
+    
+  </ion-card>
+
+ <!-- Card Dos -->
+ <ion-card id="card">
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col id="titulocard"><strong id="colortexto">Pedido 00002</strong></ion-col>
+      <ion-col id="colortexto">Monto: $2.000</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid fixed>
+    <ion-row class="row" id="colortexto">
+      <ion-col>Fecha: 01-01-2023</ion-col>
+      <ion-col>Estado: Finalizado</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col id="colortexto">Comentarios: </ion-col>
+      <ion-button [routerLink]="['/pedido']">
+        ver
+      </ion-button>
+    </ion-row>
+  </ion-grid>
+  
+</ion-card>
+
+</ion-content>

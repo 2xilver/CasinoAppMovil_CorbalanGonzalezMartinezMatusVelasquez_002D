@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar class="fondo">
+
+    <ion-buttons slot="start">
+
+      <!--MENÚ HAMBURGUESA-->
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="dark"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">perfil-usuario</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="usuario">
+    <h1> Perfil de Usuario</h1>
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-input label="Nombre:" placeholder="Felipe..."></ion-input> 
+    </ion-item>
+
+  <ion-item>
+      <ion-input label="Apellido:" placeholder="Martinez..."></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Email:" type="email" placeholder="felipe@gmail.com"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <ion-button shape="round" class="botonhistorial" expand="block" [routerLink]="['/historial-pedidos']">Historial de pedidos</ion-button>
+</ion-content>

@@ -1,0 +1,50 @@
+ion-content{
+    --background: #E85D04;
+
+    ion-button{
+        background: #E85D04;
+        border-radius: 1.5rem;
+        
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0.5rem;
+
+        ion-button {
+            height: 60px;
+            width: 60px;
+        }
+
+    }
+
+    .card {
+        height: 75%;
+        width: 100%;
+        background: #fff;
+        position: absolute;
+        bottom: 0;
+        border-radius: 3rem 3rem 0 0 ;
+        padding: 2rem;
+        color: black;
+
+        .image {
+            position: absolute;
+            top: -6.5rem;
+            width: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .card-title{
+            .titulo {
+                text-align: center;
+            }
+            .precio { 
+                text-align: center;
+                color: black;
+            }
+        }
+    }
+}
