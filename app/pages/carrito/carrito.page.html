@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar class="fondo-menu">
+    <ion-img src="/assets/Logo/logo.png"></ion-img>
+    <ion-buttons slot="start">
+      <!--MENÚ HAMBURGUESA-->
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-title>Carrito de compras</ion-title>
+
+  <div class="linea"></div>
+
+  <ion-list>
+
+    <div *ngIf="!hayProductos" class="no-products">
+      No hay productos en el carrito.
+    </div>
+
+    <ion-item *ngFor="let producto of carrito">
+      <ion-thumbnail slot="start">
+        <img [src]="producto.image" alt="Imagen del producto">
+      </ion-thumbnail>
+      
+      <ion-label>
+        <h2>{{ producto.title }}</h2>
+        <p>Precio: ${{ producto.precio }}</p>
+        <ion-button (click)="eliminarDelCarrito(producto)" color="danger" size="small">Eliminar</ion-button>
+        <ion-button (click)="incrementarCantidad(producto)">+</ion-button>
+        <ion-button (click)="decrementarCantidad(producto)">-</ion-button>
+      </ion-label>
+
+      <ion-badge slot="end">{{ producto.cantidad }}</ion-badge>
+
+    </ion-item>
+
+  </ion-list>
+
+  <div class="total-container">
+    <h3>Total: ${{ calcularTotal() }}</h3>
+  </div>
+
+  <div class="checkout-button">
+    <ion-button [disabled]="!hayProductos" expand="full" (click)="realizarPago()">Realizar Pago</ion-button>
+  </div>
+</ion-content>

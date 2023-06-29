@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar class="fondo-menu">
+    <ion-img src="/assets/Logo/logo.png"></ion-img>
+    <ion-buttons slot="start">
+
+      <!--MENÚ HAMBURGUESA-->
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="dark"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!--<ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">sugerencias</ion-title>
+    </ion-toolbar>
+  </ion-header>
+-->
+  <div class="fondo">
+    <div class="recuadro">
+      <div class="titulo">
+        <p>Sugerencias y Reclamos</p>
+      </div>
+
+      <div class="linea"></div>
+
+      <form [formGroup]="formularioComentario">
+        <div class="select">
+          <ion-select interface="popover" label="Tipo Comentario" formControlName="tipo_comentario">
+            <ion-select-option value="sugerencia">Sugerencia</ion-select-option>
+            <ion-select-option value="reclamos">Reclamos</ion-select-option>
+            <span *ngIf="formularioComentario.get('tipo_comentario')!.errors" >Nombre requerido</span>
+          </ion-select>
+          <div class="ayuda"> 
+            <p>Debe seleccionar el tipo de comentario</p>
+          </div>
+        </div>
+
+        <div class="text-comentario">
+          <div>
+            <ion-textarea type="text" required placeholder="Escribenos tus sugerencias y/o reclamos! ^^"
+                          formControlName="comentario" minlenght="5" error-text="Queremos saber tu opinión! ^^"></ion-textarea>
+          </div>
+          <div class="ayuda"> 
+            <p>Debe tener mínimo 5 carácteres.</p>
+          </div>
+        </div>
+
+
+        <div>
+          <ion-button  expand="block" fill="solid" shape="round" (click)="CrearComentario()">
+            Enviar
+          </ion-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

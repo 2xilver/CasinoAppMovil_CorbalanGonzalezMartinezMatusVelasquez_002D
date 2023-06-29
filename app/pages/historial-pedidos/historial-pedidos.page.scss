@@ -1,0 +1,160 @@
+ion-content {
+  --ion-background-color: #ffffff;
+}
+
+.fondo {
+  --background: #e85d04;
+  ion-img {
+    width: 3rem;
+    height: 3rem;
+    margin: auto;
+    margin-left: 28%;
+  }
+}
+
+#titulo {
+  text-align: center;
+  color: rgb(0, 0, 0);
+
+  p{
+    font-size: 25px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-top: 30px;
+  }
+}
+
+.texto {
+  --color: black;
+  font-size: large;
+}
+
+.linea{
+  background-color: #FB8500;
+  height: 2px;
+  width: 80%;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+#fecha {
+  --color: black;
+}
+
+.colortexto {
+  color: black;
+}
+
+.row {
+  margin-top: -2%;
+}
+
+#card ion-item {
+  --color: black;
+  white-space: nowrap;
+  margin-bottom:5px;
+}
+
+.cardi {
+  overflow-wrap: break-word;
+  text-overflow: unset;
+  white-space: normal;
+  margin-top: 5px;
+}
+#card ion-card-content ion-label.texto {
+  color: black !important;
+}
+
+div.no-products {
+  text-align: center;
+  color: black;
+  margin-top: 50%;
+}
+
+ion-card{
+  width: 85%;
+  margin: auto;
+  color: black;
+  margin-bottom: 20px;
+  background:  #ff863b25 !important;
+  border: solid 1px  #FB8500;
+
+
+
+  
+  ion-card-content{
+    padding-inline-start: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    --background: transparent ;
+  }
+  
+  ion-grid{
+    padding-top: 0px;
+    background-color:transparent;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+  }
+  
+  ion-list{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: transparent;
+  }
+
+  p{
+    font-size: 16px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-left: 10%;
+    margin-bottom: 10px;
+  }
+
+  ion-label{
+    margin-right: 20%;
+    font-size: 12.5px;
+  }
+
+  ion-card-title{
+    font-size: 14px;
+  }
+  ion-card-subtitle{
+    font-size: 17.5px;
+  }
+  ion-item{
+    --background: transparent;
+  }
+  
+}
+
+.id{
+  text-align: center;
+  color: black;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+
+.cardo {
+  white-space: normal;
+  --color: black;
+  font-size: 16px;
+}
+
+ion-button {
+  --background: #e85d04;
+}
+
+inner-scroll{
+  --padding-right: 15px;
+  height: 0%;
+  width: 0%;
+}
+
+.scroll-y{
+  padding-right: 15px;
+  height: 0%;
+  width: 0%;
+  overflow-y: var(--overflow);
+}

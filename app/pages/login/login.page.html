@@ -1,0 +1,58 @@
+<ion-header >
+  <ion-toolbar class="fondo">
+    <ion-img src="/assets/Logo/logo.png"></ion-img>
+    <!--
+      <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  -->
+  </ion-toolbar>
+</ion-header>
+    
+<ion-content >
+
+  <div class="hidden">
+    <p (click)="Registrar()" class="textohidden">...</p>
+  </div>
+  
+  <div class="login">
+    <div class="text1">
+    <p>Inicio Sesión</p>
+    <div class="linea"></div>
+  </div>
+
+    <form [formGroup] = "formularioLogin">
+      <ion-list >
+        
+        <div class="input1">
+          <ion-label class="text1">Correo Electronico</ion-label>
+          <ion-input type="email"
+           formControlName="correo"
+           placeholder="Ingrese su correo"
+           ></ion-input>
+        </div>
+        
+        <div class="input2">
+          <ion-label class="text1">Contraseña</ion-label>
+          <ion-input type="password"
+           formControlName="password"
+           placeholder="Ingrese su contraseña"
+           ></ion-input>
+        </div>
+
+        <div>
+          <ion-button (click)="presentAlert()"  shape="round" expand="block">
+            Iniciar Sesión
+          </ion-button>
+          
+          <div class="ayuda">
+            <p class="ayuda" color="warning">¿Has olvidado tu contraseña?</p>
+          </div>
+        </div>
+        
+      </ion-list>
+    </form>
+  </div>
+</ion-content>

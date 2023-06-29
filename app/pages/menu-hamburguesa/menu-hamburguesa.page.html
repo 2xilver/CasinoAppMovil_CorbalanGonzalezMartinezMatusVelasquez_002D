@@ -1,0 +1,54 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar class="fondo">
+      <ion-img src="/assets/Logo/logo.png"></ion-img>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding">
+    <!--Menú-->
+    <div class="titulo">
+      <h1>Menú</h1>
+      <ion-list>
+        <ion-item>
+          <ion-label class="menu" *ngFor="let c of componentes" [routerLink]="c.redirecTo" detail="true">
+            <img [src]="c.image" >
+          </ion-label>
+        </ion-item>
+      </ion-list>
+  </div>
+    <!--Fin Menú-->
+
+    <!--Populares-->
+    <h3>Populares</h3>
+    <div class="card" *ngFor="let food of foods" (click)="verDetalleProducto(food)">
+      <ion-img [src]="food.image"></ion-img>
+      <div class="card-content">
+        <p class="title">{{food.title}}</p>
+        <p class="precio">${{food.precio}}</p>
+      </div>
+    </div>
+    <!--Fin Populares-->
+
+    <!--Productos-->
+    <br>
+    <h3>Productos</h3>
+      <ion-item class="producto" *ngFor="let food of foods" (click)= "verDetalleProducto(food)">
+      <ion-thumbnail slot="start">
+        <img [src]="food.image">
+      </ion-thumbnail>
+      <ion-label >
+        <div class="descipcion">
+          <h4>{{food.title}}</h4>
+          <p class="des">{{food.des}}</p>
+          <p class="pre">${{food.precio}}</p>
+          <ion-icon slot="start" name="{{food.icono}}"></ion-icon>
+        </div>
+      </ion-label>
+    </ion-item>
+    <!--Fin Productos-->
+  </ion-content>
+</div>

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+      </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-card>
+    <img [src]="producto.image" alt="Imagen del producto">
+    <ion-card-header>
+      <ion-card-title><b>{{ producto.title }}</b></ion-card-title>
+      <ion-card-subtitle>${{ producto.precio }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-icon [name]="producto.icono"></ion-icon>
+      <p>{{ producto.des }}</p>
+
+      <ion-item>
+        <ion-label>Cantidad:</ion-label>
+        <ion-button slot="start" fill="outline" (click)="cantidadmenos()">-</ion-button>
+        <ion-input [(ngModel)]="producto.cantidad" type="number" min="1" [max]="producto.stock"></ion-input>
+        <ion-button slot="end" fill="outline" (click)="cantidadmas()">+</ion-button>
+      </ion-item>
+
+      <ion-button expand="block" (click)="agregarAlCarrito(producto)" [disabled]="producto.cantidad === 0">Agregar al carrito</ion-button>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

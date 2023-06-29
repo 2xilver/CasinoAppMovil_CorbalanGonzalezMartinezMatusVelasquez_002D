@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar class="fondo-menu">
+    <ion-img src="/assets/Logo/logo.png"></ion-img>
+    <ion-buttons slot="start">
+
+      <!--MENÚ HAMBURGUESA-->
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="dark"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <div class="total">
+    <!--imagen-->
+      <img src="/assets/RealizarPago/pago_finalizado.png" >
+    <!--texto-->
+      <p>Su pago ha sido realizado con éxito! ^^</p>
+    <!--botón-->
+      <ion-button [routerLink]="['/home']" expand="block" fill="clear" shape="round">
+        Aceptar
+      </ion-button>   
+  </div>
+</ion-content>

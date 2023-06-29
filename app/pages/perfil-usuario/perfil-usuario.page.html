@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar class="fondo">
+    <ion-img src="/assets/Logo/logo.png"></ion-img>
+    <ion-buttons slot="start">
+
+      <!--MENÚ HAMBURGUESA-->
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="dark"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="informacion" *ngFor="let i of ingresadoN">
+
+    <div class="usuario">
+      <h1> Perfil de Usuario</h1>
+    </div>
+
+    <div class="linea"></div>
+
+    
+    <ion-list>
+      <ion-item lines="none">
+        <ion-label>Nombre: {{i.nomUsuario}}</ion-label>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Email: {{i.correoUsuario}}</ion-label>
+      </ion-item>
+
+    </ion-list>
+
+  </div>
+
+  <ion-button shape="round" class="botonhistorial" expand="block" [routerLink]="['/historial-pedidos']" >Historial de pedidos</ion-button>
+
+</ion-content>

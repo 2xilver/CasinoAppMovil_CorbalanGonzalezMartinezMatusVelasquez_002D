@@ -1,0 +1,46 @@
+<ion-header >
+  <ion-toolbar class="fondo"> 
+    <ion-buttons slot="start">
+      <ion-back-button
+      defaultHref="/login"
+      text="Volver"
+      color="white">
+      </ion-back-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="registro">
+    <div class="text1">
+      <h4>Registro</h4>
+    </div>
+    <form [formGroup]="formularioRegistro">
+      <ion-list>
+        <div class="input1">
+          <ion-label position="floating" class="text1">Nombre</ion-label>
+          <ion-input type="text" placeholder="Juan Velásquez" formControlName="nombre"></ion-input>
+        </div>
+  
+        <div class="input2">
+          <ion-label position="floating" class="text1">Correo electrónico</ion-label>
+          <ion-input type="email" placeholder="Juan@duocuc.cl" formControlName="correo"></ion-input>
+        </div>
+  
+        <div class="input1">
+          <ion-label position="floating" class="text1">Contraseña</ion-label>
+          <ion-input type="password" placeholder="Mínimo 6 caracteres" class="text1" formControlName="password"></ion-input>
+        </div>
+  
+        <div class="input2">
+          <ion-label position="floating">Confirmar contraseña</ion-label>
+          <ion-input type="password" placeholder="Repita la clave" class="text1" formControlName="confirmaPass"></ion-input>
+        </div>
+        
+        <ion-button (click)="CrearUsuario()" expand="block" shape="round">
+          Registrarse
+        </ion-button>
+      </ion-list>
+    </form>
+  </div>
+</ion-content>

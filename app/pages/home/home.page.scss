@@ -1,0 +1,154 @@
+ion-content{
+  --ion-background-color:   #ffffff  0/100% 100% no-repeat;
+}
+
+.fondo{
+  --background:  #E85D04;
+  ion-img {
+      width: 3rem;
+      height: 3rem;
+      margin: auto;
+      margin-left: 28%;
+    }
+}
+
+.menu{
+  border-radius: 1rem;
+  display: flex;
+  margin: 2px;
+}
+
+ion-item{
+  --background: transparent !important;
+  padding: 0px;
+
+  color: black;
+}
+
+.titulo{
+  color: black;
+  
+
+
+  ion-item{
+    --background: #fff !important;
+    border-radius: 0px;
+    --border-color: 0px solid #caccced0;
+  }
+
+  .list-md{
+    --background: transparent !important;
+    padding: 0px;
+  }
+
+}
+
+.card {
+  width: 100%;
+  padding: 1.6rem 2rem;
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border-radius: 2.5rem;
+  margin-bottom: 1.5rem;
+
+  .card-content {
+      text-align: center;
+      .title {
+          font-weight: 700;
+          font-size: 1.1rem;
+          margin-bottom: 0.2rem;
+          color: #1d1d1d;
+      }
+      .precio {
+          font-size: 1rem;
+          margin-top: 0;
+          color: black;
+      }
+
+      ion-buttons {
+          position: absolute;
+          bottom: -1rem;
+          left: 50%;
+          transform: translateX(-50%);
+
+          
+          ion-button {
+              --background:#E85D04; 
+              font-weight: 700;
+              color: #ffff;
+              width: 40px;
+              height: 40px;
+              
+              --padding-start: 0;
+              --padding-end: 0;
+              --padding-top: 0;
+              --padding-bottom: 0;
+          }
+          
+          span {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+          }
+          
+
+          .titulo {
+              text-align: center;
+          }
+
+      }
+  }
+}
+
+
+.producto{
+  --webkit-tap-highlight-color: none;
+  .image {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-right: 1.2rem;
+      position: absolute;
+      left: 0.5%;
+      top: 50%;
+      transform: translateY(-50%);
+      box-shadow: 10px 10px 10px 0px #e5e5e5;
+  }
+  .descipcion{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      
+      
+
+      h4 {
+          font-weight: 600;
+          font-size: 15px;
+          color: #1f1f1f;
+      }
+
+      pre {
+          font-size: 13px;
+          font-weight: 100;
+          margin: 0.5rem 0;
+      }
+
+      .des {
+          font-size: 12px;
+      }
+
+  }
+}
+
+h2{
+  color:black;
+}
+
+h3{
+  color: black;
+}
+
+
+
